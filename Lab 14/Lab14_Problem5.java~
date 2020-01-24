@@ -1,0 +1,50 @@
+import java.util.*;
+
+public class Lab14_Problem5
+{
+  public static void main(String[] args)
+  {
+    int iVal;
+    int iFactorial;
+    
+    Scanner cin = new Scanner(System.in);
+    
+    System.out.print("Enter an integer value from 1 to 20: ");
+    iVal = cin.nextInt();
+    
+    iFactorial = fiFactorial(iVal);
+    
+  }
+  
+  public static int fiFactorial(int piVal)
+  {
+    
+    try 
+    {
+      piVal = cin.nextInt();
+      
+      if ( piVal < 1 || piVal > 20)
+      {
+        System.out.println("Error: not in range 1 to 20");
+        
+      }
+      else
+      {
+        if ( piVal == 0)
+        {
+          
+          return piVal;
+        }
+        else
+        {
+          return piVal * fiFactorial((piVal-1)); 
+        }
+      }
+    }
+    catch(InputMismatchException)
+    {
+      System.out.println("Error: not an int");
+    }
+    
+  }
+}

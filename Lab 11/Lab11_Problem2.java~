@@ -1,0 +1,131 @@
+/*
+ COSC 236
+ Your name:Christian Seyoum
+ Description:Sorting
+ Filename:Lab11_problem2
+ Date started:7/6/2018
+ Modification history:7/6/2018
+ Classes: main
+ */
+
+import java.util.*;
+
+public class Lab11_Problem2
+{
+  public static void main (String[] args)
+  {
+    int iArray[] = new int[10];
+    fvArray(iArray,0,400);
+    String sChoice;
+    sChoice = fsChoice(iArray);
+  }
+  
+  public static void fvArray(int piArray[], int piMin, int piMax)
+  {    
+    int iSub;
+    int iRand;
+    
+    Random rand = new Random();
+    
+    System.out.print("Native array: ");
+    
+    for (iSub = 0; iSub < piArray.length; iSub++)
+    {
+      iRand = rand.nextInt((piMax-piMin)+1)+piMin;
+      piArray[iSub] = iRand;
+      
+      System.out.print(piArray[iSub]+" ");     
+      
+    }    
+    fvDisplay(piArray);
+    
+    
+    return;
+  }
+  
+  public static void fvisplay(int piArray[])
+  {
+    int iSub;
+    
+    
+    
+    System.out.print("Native array: ");
+    
+    for (iSub = 0; iSub < piArray.length; iSub++)
+    {
+      
+      System.out.print(piArray[iSub]+" ");     
+      
+    }    
+    
+    
+    
+    return;
+  }
+  public static String fsChoice(int piArray[])
+  {
+    String sChoice;
+    
+    Scanner cin = new Scanner(System.in);
+    do
+    { 
+      
+      System.out.print("\nEnter A for ascending sort, D for descending: ");
+      sChoice = cin.nextLine();
+      if(sChoice.equals("A"))
+      {
+        fvAscending(piArray);        
+        
+      }
+     // else if (sChoice.equals("D"))
+      //{
+        //fvDescending(piArray);       
+        
+        
+      //}
+      else
+      {
+        System.out.println("Error: type A or D");
+      }
+      
+    }while (!sChoice.equals("A") || !sChoice.equals("D"));
+    
+    return sChoice;
+  }
+  
+  public statice void fvAscending(int piArray[])
+  {
+    int iOuter;
+    int iSub;
+    int iTemp;
+    int iInterchanges;
+    iInterchanges=0;
+    for (iOuter = 0; iOuter < piArray.length - 1; iOuter ++ )
+    {     
+      // Inner loop::
+      for (iSub = 0; iSub < piArray.length - iOuter - 1; iSub ++)
+      {
+        //Compare the next two adjacent values:
+        if (piArray[iSub] > piArray[iSub + 1])
+        {        
+          // Interchange, since they're out of ascending order:
+          iTemp = piArray[iSub];
+          piArray[iSub] = piArray[iSub + 1];
+          piArray[iSub + 1] = iTemp;
+          
+          iInterchanges ++;
+        }
+      }
+    }
+    
+    for (iSub = 0; iSub < piArray.length; iSub ++)      
+    {
+      System.out.println(piArray[iSub]);
+    }
+    
+  }
+ /* public statice void fvDescending(int piArray[])
+  {
+    
+  }*/
+}

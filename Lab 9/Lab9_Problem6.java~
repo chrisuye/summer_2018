@@ -1,0 +1,78 @@
+import java.util.*;
+import java.io.*;
+public class Lab9_Problem6
+{
+  public static void main(String[] args)
+  {
+    int iDice;
+    int iRole;
+    int iVal;
+    Scanner cin = new Scanner(System.in);
+    System.out.print("How many dices to you want to role?");
+    iDice = cin.nextInt();
+    if (iDice >=1)
+    {
+      System.out.print("How many roles do you want per dice?");
+      iRole = cin.nextInt();
+      
+      if (iCol>=1)
+      {
+        iVal = fiCreateFile(iDice,iRole);
+        if (iVal != 0)
+        {
+          System.out.println("Success: file processing complete");
+        }
+        else
+        {
+          System.out.println("Error: unable to create output file");
+        }
+      }
+      else
+      {
+        return;
+      }
+    }
+    else
+    {
+      return;
+    }
+  }
+  public static int fiOutPut(int piDice, int piRole)
+  {
+    int iRand;
+    int iCountDice;
+    int iCountRole;
+    int iCount;
+    
+    iCount=0;
+    try
+    {
+      PrintStream ofsOutput= new PrintStream(new File("c:/home/student/seyoum/folder/Problem_6.txt"));
+      Random rand = new Random();
+      for(iCountDice=1; iCountDice<=piDice; iCountDice++)
+      {
+        for(iCountRole=0; iCountRole<piRole; iCountRole++)
+        {
+          iRand = rand.nextInt((6-1)+1)+1;
+          
+          ofsOutput.println("Dice "+iCountDice);          
+          ofsOutput.printf("%6d", iRand);
+          iCount++;
+        }
+        ofsOutput.println("");  
+      }
+    }
+    
+    catch(FileNotFoundException sMsg)
+    {
+      System.out.println("Error");
+      return -1;
+    }
+    return iCount;
+  }
+  
+  public static void fvOutPut(int piCount)
+  {
+    System.out.println("File can not be created");
+  }
+}

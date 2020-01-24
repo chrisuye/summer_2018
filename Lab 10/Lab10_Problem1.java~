@@ -1,0 +1,57 @@
+/*
+COSC 236
+Your name:Christian Seyoum
+Description:Array
+Filename:Lab10_problem1
+Date started:6/27/2018
+Modification history:6/27/2018
+Classes: main
+*/
+import java.util.*;
+import java.text.*;
+public class Lab10_Problem1
+{
+  public static void main(String[] args)
+  {
+    
+   // double[] dSals = new double[8];
+    
+    //int iCount;
+    /*
+    dSals[0]=6.7;
+    dSals[1]=89.7;
+    dSals[2]=76.7;
+    dSals[3]=8789.7;
+    dSals[4]=88.7;
+    dSals[5]=67.0;
+    dSals[6]=60.9;
+    dSals[7]=689.0;
+    */
+    
+    double dSals[] = {10700.25, 33239.00, 33880.50, 40204.30, 45000.00, 60774.30 , 136900.80, 150243.10};
+    
+    
+    /*Scanner cin = new Scanner(System.in);
+     
+    
+    for(iCount=1 ; iCount<=8; iCount++)
+    {
+      System.out.print("Enter salary "+iCount+":");
+      dSals[iCount-1] = cin.nextDouble();
+    }*/
+    
+    
+    //System.out.println(dSals[4]);
+    fvDisplay(dSals);
+  }
+  public static void fvDisplay( double pdSals[])
+  {
+    int iCount;
+    DecimalFormat df = new DecimalFormat("$#,#00.00");
+    for (iCount=1; iCount<=8; iCount++)
+    {
+      System.out.println("Salary "+iCount+": "+df.format(pdSals[iCount-1]));
+    }
+    return;
+  }
+}

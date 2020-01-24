@@ -1,0 +1,25 @@
+import java.util.*;
+public class Lab7_Problem1{
+
+public static void main(String args[]) {
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter a numeber with in the range 1-50");
+int n=sc.nextInt();
+if(n>=1 && n <=50)
+fvDrawTriangle(n);
+else
+System.out.println("Out of the range 1-50");
+}
+
+  
+public static void fvDrawTriangle(int n) {
+
+for(int i=n;i>=1;i--) {
+for (int j=i;j>=1;j--) {
+           System.out.print("*");
+}
+System.out.println("");
+}
+
+}
+}

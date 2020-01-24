@@ -1,0 +1,75 @@
+/*
+ COSC 236
+ Your name:Christian Seyoum
+ Description:Display gate and corresponding radio frequency
+ Filename:Lab4_problem3 
+ Date started:6/5/2018
+ Modification history:6/10/2018
+ Classes: main
+ */
+
+import java.util.Scanner;
+public class Lab4_Problem3
+{
+  public static void main(String[] args)
+  {
+    // DECLARATIONS
+    
+    
+    // Input-capture variables:
+    int iRadial;
+    
+    
+    // Expression-result variables:
+    Scanner cin = new Scanner(System.in);
+    
+    // Counter, accumulator, or flag variables:
+    
+    // Other variables:
+    
+    // Instantiations:
+    
+    
+    // INITIALIZE VARIABLES
+    
+    
+    // INPUT
+    System.out.print("Enter radial: ");
+    iRadial=cin.nextInt();
+    
+    
+    // PROCESSING AND CALCULATIONS
+    if (iRadial>=1 && iRadial<=360)
+    {
+      if (iRadial>=1 && iRadial<45)
+        System.out.println("Use WOOLY on 132.775 342.425");
+      else if (iRadial>=45 && iRadial<90)
+        System.out.println("Use PALEO on 132.775 342.425");
+      else if (iRadial>=90 && iRadial<135)
+        System.out.println("Use WHINO on 125.125 291.775");  
+      else if (iRadial>=135 && iRadial<180)
+        System.out.println("Use GRUBY on 125.125 291.775");   
+      else if (iRadial>=180 && iRadial<225)
+        System.out.println("Use BRV on 127.325 236.775");  
+      else if (iRadial>=225 && iRadial<270)
+        System.out.println("Use FLUKY on 127.325 236.775");
+      else if (iRadial>=270 && iRadial<315)
+        System.out.println("Use JASEN on 127.325 236.775");
+      else if (iRadial>=315 && iRadial<=360)
+        System.out.println("Use LUCKE on 132.775");
+      else
+        System.out.println("Invalid entry");
+    }
+    else
+      System.out.println("must be between 1 and 360");
+    
+    
+    
+    
+    // OUTPUT
+    
+    
+    
+    
+  }
+}

@@ -1,0 +1,113 @@
+import java.util.*;
+
+public class Lab11_Problem4
+{
+  public static void main(String[] args)
+  {
+    int iSub;
+    for (iSub = 0; iSub <= 7; iSub++) or
+      for (iSub = 0; iSub < 8; iSub++)
+    {
+      System.out.println(dSals[iSub]);
+    }
+    
+    int iSub;
+    for (iSub = 0; iSub <= 7; iSub++) or
+      for (iSub = 0; iSub < 8; iSub++) 
+    {
+      dSals[iSub] = dSals[iSub] * 1.05; or
+        dSals[iSub] = dSals[iSub] + (dSals[iSub] * .05);
+    }
+    int iSub;
+    boolean bFound;
+    
+    bFound = false;
+    
+    for (iSub = 0; iSub <= 7; iSub++) or
+      for (iSub = 0; iSub < 8; iSub++)
+    {
+      if (dSals[iSub] == dSearchValue)
+      {
+        bFound  = true;
+        break;
+      }
+    }
+    
+    int iSub;
+    double dSum;
+    dSum = 0;
+    
+    for (iSub = 0; iSub <= 7; iSub = iSub + 2) or
+      for (iSub = 0; iSub < 8; iSub = iSub + 2)
+    {
+      dSum = dSum + dSals[iSub];
+    }
+    int iSub;
+    double dSum;
+    
+    dSum = 0;
+    iSub = 0;
+    
+    while (iSub <= 7) or 
+      while (iSub < 8)
+    {
+      dSum = dSum + dSals[iSub];
+      iSub = iSub + 2;
+    }
+    
+    
+    int iSub;
+    int iLocation;
+    double dSmallest;
+    
+    iLocation = 0;
+    dSmallest = dSals[0];
+    
+    for (iSub = 1; iSub <= 7; iSub++)
+    {
+      if (dSals[iSub] < dSmallest)
+      {
+        iLocation = iSub;
+      }
+    }
+    System.out.println("Location of smallest: " +  iLocation);
+    
+    int iSub;
+    Random rand = new Random();
+    
+    for (iSub = 0; iSub <= 9; iSub ++) or
+      for (iSub = 0; iSub < 10; iSub ++)
+    {
+      // Toss the coin:
+      iRandom = rand.nextInt((iMax – iMin) + 1) + 1;
+      
+      // Store the outcome:
+      iTosses[iSub] = iRandom;
+    }
+    int iSub;
+    for (iSub = 0; iSub <= 9; iSub ++) or
+      for (iSub = 0; iSub < 10; iSub ++)
+    {
+      if (iTosses[iSub] == 0)
+      {
+        System.out.println("Index " + iSub + ": Heads");
+      }
+      else
+      {
+        System.out.println("Index " + iSub + ": Tails");
+      }
+    }
+    double dTemp;
+    
+    dTemp = dVals[1];
+    dVals[1] = dVals[2];
+    dVals[2] = dTemp;
+    
+    double dTemp;
+    
+    dTemp = dVals[0];
+    dVals[0] = dVals[dVals.length – 1];
+    dVals[dVals.length – 1] = dTemp;
+    
+  }
+}

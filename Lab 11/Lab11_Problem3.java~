@@ -1,0 +1,57 @@
+import java.io.*;
+import java.util.*;
+
+public class Lab11_Problem3
+{
+public static void main(String[] args) throws FileNotFoundException
+{
+String sLetters[] = new String[52];
+int iCounts[] = new int[52];
+int iSub;
+
+fvPopulateCounterArray(sLetters);
+fvReadAndCount("LetterCounterData.txt", sLetters, iCounts);
+fvShowLetterCount(sLetters, iCounts);
+}
+
+public static void fvPopulateCounterArray(String[] sLtr)
+{
+int iSub = 0;
+for (int iLtr = 'a'; iLtr <= 'z'; iLtr ++)
+{
+sLtr[iSub] = String.valueOf((char) iLtr);
+iSub ++;
+}
+for (int iLtr = 'A'; iLtr <= 'Z'; iLtr ++)
+{
+sLtr[iSub] = String.valueOf((char) iLtr);
+iSub ++;
+}
+}
+public static void fvShowLetterCount(String[] sLetter, int[] iCounts)
+{
+for(int i = 0; i < 52; i++)
+System.out.println(sLetter[i] + ": " + iCounts[i]);
+}
+public static void fvReadAndCount(String psFile, String psLetters[], int piCounts[]) throws FileNotFoundException
+{
+//In fvReadAndCount, you'll need to extract each line, then in each line, extract each character.
+//Then, you have to test the character against each of the 52 letters. If you get a match,
+//then you need to increment the letter count:
+for(int i = 0; i < 52; i++)
+piCounts[i] = 0;
+Scanner file = new Scanner(new File(psFile));
+while(file.hasNextLine())
+{
+String temp = file.nextLine();
+for(int i = 0; i < temp.length(); i++)
+{
+char sChar = temp.charAt(i);
+for (int iSub = 0; iSub <= 51; iSub ++)
+if (psLetters[iSub].equals(sChar))
+piCounts[iSub] = piCounts[iSub] + 1;
+}   
+}
+}
+}
+

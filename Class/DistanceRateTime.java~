@@ -1,0 +1,22 @@
+public class DistanceRateTime
+{
+  public static double fdRate(double pdDistance, double pdTime)
+  {
+    double dRate;
+    
+    dRate = pdDistance/pdTime;
+    return dRate;
+  }
+   public static double fdDistance(double pdRate, double pdTime)
+  {
+     double dDistance;
+     dDistance = pdRate * pdTime;
+     return dDistance;
+  }
+    public static double fdTime(double pdRate, double pdDistance)
+  {
+      double dTime;
+      dTime = pdDistance / pdRate;
+      return dTime;
+  }
+}

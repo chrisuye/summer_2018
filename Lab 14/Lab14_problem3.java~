@@ -1,0 +1,49 @@
+import java.util.*;
+
+public class Lab14_problem3
+{
+  public static void main(String[] args)
+  {
+    ArrayList<Int> ListNums = new ArrayList<Int>();
+    
+    fvPop(ListNums);
+    //fvDisplay(State);
+  }
+  public static void fvPop(ArrayList<Int> ListNums)
+  {
+    int iRand;
+    int iCount;
+    Random rand = new Random();
+    for(iCount=0; iCount<100; iCount++)
+    {
+    iRand = rand.nextInt((10-1)+1)+1;
+    ListNums.add(iRand);
+    }
+  }
+ /* public static void fvDisplay(ArrayList<String> State)
+  {
+    
+    int iIndex;
+    String sState;
+    
+    
+    State.add(0,"UT");
+    
+    Collections.sort(State); 
+    State.remove(1);
+    Collections.reverse(State);
+    State.add("GA");
+    State.add("GA");
+    State.remove("GA");
+    //State.clear();
+    for (iIndex = 0; iIndex < State.size(); iIndex ++)
+    {
+      sState = State.get(iIndex);
+      System.out.println("Index " + iIndex + ": " + sState);
+      
+    }
+    System.out.println("Array size: "+State.size());
+    return;
+
+  }*/
+}

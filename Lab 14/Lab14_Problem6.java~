@@ -1,0 +1,93 @@
+import java.util.*;
+
+public class Lab14_Problem6 
+{
+  
+  /**
+   * 
+   * method to print the array
+   * 
+   */
+  
+  public static void print(int array[]) 
+  {
+    
+    for (int i = 0; i < array.length; i++) 
+    {
+      
+      System.out.printf(array[i] + " ");
+      
+    }
+    
+    System.out.println();
+    
+  }
+  
+  /**
+   * 
+   * method to sort an array recursively and return the number of iterations
+   * 
+   * (recursive calls) needed to sort it
+   * 
+   */
+  
+  public static int recursiveSort(int array[])
+  {
+    
+    boolean done = true;// assuming the array is sorted
+    
+    for (int i = 0; i < array.length - 1; i++) 
+    {
+      
+      if (array[i] > array[i + 1]) {
+        
+        // assumption was wrong
+        
+        done = false;
+        
+        // swapping elements
+        
+        int temp = array[i];
+        
+        array[i] = array[i + 1];
+        
+        array[i + 1] = temp;
+        
+      }
+      
+    }
+    
+    if (!done) {
+      
+      // recursively calling again and returning +1 for the extra
+      
+      // recursive call
+      
+      return 1 + recursiveSort(array);
+      
+    }
+    
+    return 0; // array is sorted, no swapping was needed in this call
+    
+  }
+  
+  public static void main(String[] args) 
+  {
+    
+    int array[] = { 3, 19, 4, 7, 1 }; // array
+    
+    System.out.println("Before:");
+    
+    print(array);
+    
+    int iter = recursiveSort(array);
+    
+    System.out.println("After:");
+    
+    print(array);
+    
+    System.out.println(iter+ " iterations (recursive calls) needed for sorting above array");
+    
+  }
+  
+}

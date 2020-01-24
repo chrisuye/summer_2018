@@ -1,0 +1,46 @@
+/*
+ COSC 236
+ Your name:Christian Seyoum
+ Description: 
+ Filename:Lab7_problem6 
+ Date started:6/22/2018
+ Modification history:6/22/2018
+ Classes: main
+ */
+import java.util.*;
+public class Lab7_Problem6 
+{
+  
+  public static void main(String[] args)
+  {
+    int iStudent;
+    Scanner cin= new Scanner(System.in);
+    System.out.print("How many students do you have?");
+    iStudent = cin.nextInt();
+    fvStudent(iStudent);
+  }
+  public static void fvStudent(int piStudent)
+  {
+    int iTest;
+    int iCount;
+    int iCounter;
+    double dGrade;
+    iCount=1;
+    Scanner cs= new Scanner(System.in);
+    System.out.print("How many tests do each student take?");
+    iTest = cs.nextInt();
+    while (iCount <= piStudent)
+    {
+      System.out.println ("Student "+iCount+":");
+      iCounter=1;
+      while (iCounter <= iTest)
+      {
+        System.out.print("\tTest "+iCounter+":");
+        dGrade = cs.nextDouble();
+        iCounter++;
+      }
+      iCount++;
+    }
+    return;
+  }
+}

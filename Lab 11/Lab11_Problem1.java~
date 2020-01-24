@@ -1,0 +1,16 @@
+import java.util.*;
+
+public class Lab11_Problem1
+{
+  public static void main (string[] args)
+  {
+    int iArray[] = {47,93,108,173,4,38,62,87,19,11};
+    char cShift;
+    
+    while (cShift != 'Q')
+    {
+      System.out.print("work");
+    }
+  }
+}
+                           

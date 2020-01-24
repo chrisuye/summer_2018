@@ -1,0 +1,58 @@
+/*
+COSC 236
+Your name:Christian Seyoum
+Description:cost of copies
+Filename:
+Date started:
+Modification history:
+Classes: main
+*/
+import java.text.DecimalFormat;
+import java.util.Scanner;
+public class Quiz3
+{
+  public static void main(String[] args)
+  {
+    // DECLARATIONS
+    int iCount;
+    int iScore;
+    int iSum;
+    // Input-capture variables:
+    
+   
+
+    // Expression-result variables:
+    Scanner cin = new Scanner(System.in);
+    DecimalFormat dfDPlace = new DecimalFormat("#,###.00");
+    
+
+    // Counter, accumulator, or flag variables:
+
+    // Other variables:
+
+    // Instantiations:
+
+    
+    // INITIALIZE VARIABLES
+    iCount=1;
+    iSum=0;
+    // INPUT
+    
+    
+    // PROCESSING AND CALCULATIONS
+    while (iCount<=5)
+    {
+      System.out.print("Number: ");
+    iScore=cin.nextInt();
+    iSum=iSum+iScore;
+    iCount++;      
+    }
+    System.out.println("Mean: "+df.format(iSum/2));
+    
+    
+    // OUTPUT
+
+ 
+
+  }
+}

@@ -1,0 +1,20 @@
+import java.util.*;
+
+public class Lab14_Problem2
+{
+  public static void main(Sting[] args)
+  {
+     ArrayList<int> ListNum = new ArrayList<int>();
+     
+     ListNum.add(45);
+     ListNum.add(55);
+     ListNum.add(67);
+     ListNum.add(95);
+     
+     ListNum.add(2,89);
+     ListNum.add(1,78);
+     
+     System.out.println("Fist value: "+listNum.get(0));
+     System.out.println("Last value: "+listNum.get(5));
+  }
+}

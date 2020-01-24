@@ -1,0 +1,1 @@
+26 Aug 2018 22:12:11 GMT: Log 'EclipseCompiler.txt' opened: 26 Aug 2018 22:12:11 GMT with name C:\Users\chris\Desktop\Towson\Summer 2018\COSC 236\lab 1\EclipseCompiler.txt

@@ -1,0 +1,81 @@
+/*
+ COSC 236
+ Your name:Christian Seyoum
+ Description:
+ Filename:Lab5_problem1 
+ Date started:6/12/2018
+ Modification history:6/10/2018
+ Classes: main
+ */
+
+
+
+import java.util.Scanner;
+
+public class Lab5_Problem1 
+{
+  
+  public static void main(String[] args)
+  {
+    // DECLARATIONS
+    
+    
+    // Input-capture variables:
+    String sIn;
+    Scanner cin= new Scanner(System.in);
+    
+    System.out.print("Are you available March 10? Y or N: ");
+    
+    sIn=cin.nextLine();
+    sIn=sIn.toupperCase();
+    
+     
+      
+      
+      if (sIn=="Y") 
+      {
+        System.out.println("Are you 18 or older? Y or No: ");
+        sIn=sIn.toupperCase();
+        if (sIn=="Y")
+        {
+        System.out.println("Are you married? Y or N: ");
+        sIn=sIn.toupperCase();
+          if(sIn=="Y")
+          {
+            System.out.println("Are you 18 or older? Y or No: "+sStrings.length());
+            System.out.println("Are you 18 or older? Y or No: "+sStrings.length());
+            System.out.println("Are you 18 or older? Y or No: "+sStrings.length());
+            System.out.println("Are you 18 or older? Y or No: "+sStrings.length());
+          }
+          else if()
+          {
+          }
+          else
+          {
+            System.out.println("Are you 18 or older? Y or No: "+sStrings.length());
+            System.out.println("Are you 18 or older? Y or No: "+sStrings.length());
+            System.out.println("Are you 18 or older? Y or No: "+sStrings.length());
+            System.out.println("Are you 18 or older? Y or No: "+sStrings.length());
+          }
+        }
+        else if()
+        {
+        }
+        else
+        {
+        }
+      }
+      else if(sIn=="N")
+      {
+        System.out.println("Are you availabe March 19? Y or N"+sIN);
+      }
+      else
+      {
+        System.out.println("Error: Invalid response. Y or N is required");
+        
+      }
+      
+    }
+    
+  }
+  

@@ -1,0 +1,55 @@
+/*
+ COSC 236
+ Your name:Christian Seyoum
+ Description: schoalarship
+ Filename:Lab5_problem3 
+ Date started:6/12/2018
+ Modification history:6/12/2018
+ Classes: main
+ */
+
+
+
+import java.util.Scanner;
+
+public class Lab5_Problem3 
+{
+  
+  public static void main(String[] args)
+  {
+    // DECLARATIONS
+    
+    
+    // Input-capture variables:
+    int iPick;
+    
+    Scanner cin= new Scanner(System.in);
+    
+    System.out.println("1 Calculate the volume of a sphere");
+    System.out.println("2 Calculate the volume of a cone");
+    System.out.println("3 Calculate the volume of a rectangular solid");
+    System.out.println("4 Calculate the volume of a cylinder");
+    System.out.println("5 Calculate the volume of a pyramid");
+    System.out.print("6 Do nothing (quit)");
+    iPick=cin.nextInt();
+    
+  switch (iPick)
+  {
+    case 1:
+      VolumeSphere(dRad)
+      break;
+      default
+        break;
+    
+  }
+    
+  }
+  public static void VolumeSphere(double dRad)
+  {
+    System.out.print("Enter radus of sphere ");
+    drad=cin.nextDouble();
+    System.out.println("Volume is "+(4/3)*3.14*dRad*dRad*dRad);
+  }
+  
+}
+

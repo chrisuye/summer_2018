@@ -1,0 +1,71 @@
+import java.util.*;
+
+public class Lab13_Problem3
+{
+  public static void main(String[] args)
+  {
+    int iNums[][] = new int[3][3];
+    
+    fvPop(iNums);
+    fvDisplay(iNums);
+    fvTranspose(iNums);
+    
+  }
+  public static void fvPop(int piNums[][])
+  {
+    int iRand;
+    int iRow;
+    int iCol;
+    int iRowLen;
+    int iColLen;
+    iRowLen = piNums.length;
+    iColLen = piNums[0].length;
+    Random rand = new Random();
+    for(iRow = 0; iRow<iRowLen; iRow++)
+    {
+      for(iCol = 0; iCol<iColLen; iCol++)
+      {
+        iRand = rand.nextInt((9-0)+1)+0;
+        piNums[iRow][iCol] = iRand;
+      }
+    }
+    return;
+  }
+  public static void fvDisplay(int piNums[][])
+  {
+    int iRow;
+    int iCol;
+    int iRowLen;
+    int iColLen;
+    iRowLen = piNums.length;
+    iColLen = piNums[0].length;
+    for(iRow = 0; iRow<iRowLen; iRow++)
+    {
+      for(iCol = 0; iCol<iColLen; iCol++)
+      {
+        System.out.printf("%8d", piNums[iRow][iCol]);
+      }
+      System.out.println("\n");
+    }
+    return;
+  }
+  public static void fvTranspose(int piNums[][])
+  {
+    int iRow;
+    int iCol;
+    int iRowLen;
+    int iColLen;
+    iRowLen = piNums.length;
+    iColLen = piNums[0].length;
+      
+    for(iRow = 0; iRow<iRowLen; iRow++)
+    {
+      for(iCol = 0; iCol<iColLen; iCol++)
+      {
+        piNums[iRow][iCol] = piNums[iCol][iRow];
+        System.out.printf("%8d", piNums[iRow][iCol]);
+      }
+      System.out.println("\n");
+    }
+  }
+}
